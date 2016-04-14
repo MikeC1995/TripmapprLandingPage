@@ -92,11 +92,23 @@
     <div id="sign-up">
       <h2>Interested?</h2>
       <h3>Sign up below and you'll be the first to know when we launch!</h3>
-      <form>
-        <input type="text" placeholder="Name"></input>
-        <input type="email" placeholder="Email"></input>
+      <form name="signUpForm" ng-submit="onSignUp" action="https://formspree.io/mike_christensen@btinternet.com" method="POST">
+        <input type="text" name="name" placeholder="Name" required></input>
+        <input type="email" name="email" placeholder="Email" required></input>
         <button type="submit"><span>SIGN UP</span></button>
+        <!-- Hidden form elements for formspree.io -->
+        <input type="hidden" name="_next" value="/#/thanks"></input>
+        <input type="hidden" name="_subject" value="TRIPMAPPR: New submission!"></input>
+        <input type="hidden" name="_gotcha"></input>
+        <input type="hidden" name="_format" value="plain"></input>
       </form>
+    </div>
+    <div id="thanks" ng-show="$state.is('thanks')">
+      <div>
+        <a href="/"><img src="/assets/images/icons/close.png"></a>
+        <h2>Thanks!</h2>
+        <p>We are working hard to get Tripmappr ready for you.<br>Keep an eye on your inbox for updates!</p>
+      </div>
     </div>
 
     <!-- Dependencies -->
