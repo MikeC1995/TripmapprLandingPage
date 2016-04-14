@@ -1,0 +1,15 @@
+{
+  "name": "TripmapprLandingPage",
+  "description": "Tripmappr app's landing page",
+  "main": "server.js",
+  "authors": [
+    "Mike Christensen"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/MikeC1995/TripmapprLandingPage",
+  "moduleType": [],
+  "private": true,
+  "dependencies": {
+    "angular-animate": "~1.5.3"
+  }
+}
