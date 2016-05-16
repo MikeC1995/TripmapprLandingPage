@@ -111,15 +111,15 @@ app.directive('animatedMap', function() {
         // line segment vertices in percentages (corresponding to img
         // top and left offsets)
         points = [{
-          x: 0.20, y: 0.35, id: 'london'
+          x: 0.20, y: 0.3, id: 'london'
         },{
-          x: 0.27, y: 0.5, id: 'paris'
+          x: 0.27, y: 0.45, id: 'paris'
         },{
-          x: 0.45, y: 0.4, id: 'berlin'
+          x: 0.45, y: 0.35, id: 'berlin'
         },{
-          x: 0.6, y: 0.55, id: 'budapest'
+          x: 0.6, y: 0.5, id: 'budapest'
         },{
-          x: 0.55, y: 0.7, id: 'croatia'
+          x: 0.55, y: 0.65, id: 'croatia'
         }];
         points = percentagesToPoints(points);
         if(!$(canvasContainer).hasClass('drawn')) {
