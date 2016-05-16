@@ -104,15 +104,38 @@
     }
 
     li {
+      &:nth-child(even) {
+        div.feature-content {
+          text-align: right;
+          &.graphic {
+            text-align: left;
+          }
+
+          &.text .node {
+            right: 0;
+            margin-right: -13px;
+          }
+        }
+      }
+
+      &:nth-child(odd) {
+        div.feature-content {
+          &.text .node {
+            left: 0;
+            margin-left: -13px;
+          }
+        }
+      }
+
       div.feature-content {
         width: 50%;
         height: 350px;
+        text-align: left;
         float: left;
         box-sizing: border-box;
         padding: 20px 100px;
-        text-align: left;
 
-        &:first-child {
+        &.graphic {
           text-align: right;
           img {
             height: 100%;
@@ -120,12 +143,10 @@
           }
         }
 
-        &:nth-child(2) {
+        &.text {
           position: relative;
           .node {
             position: absolute;
-            left: 0;
-            margin-left: -13px;
             top: 60px;
             width: 26px;
             height: 26px;
