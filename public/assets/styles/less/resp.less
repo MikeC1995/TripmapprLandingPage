@@ -91,16 +91,23 @@
       left: 35px;
     }
     ul:not(.open) {
-      display: none;
+      visibility: hidden;
+      position: absolute; // to take out of flow
+      opacity: 0;
     }
     ul.open {
-      display: block;
+      visibility: visible;
       position: absolute;
       top: 80px;
       left: 0;
       right: 0;
       float: none;
       text-align: center;
+      box-shadow: @shadow3;
+      
+      opacity: 1;
+      transition: opacity 0.5s ease-out;
+
       li {
         float: none;
         width: 100%;
