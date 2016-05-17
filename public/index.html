@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="https://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
   <head>
-    <meta charset="utf-8">
-    <base href="/">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <base href="/" />
     <title>Tripmappr</title>
-    <meta name="description" content="Put your memories on the map.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Put your memories on the map." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Open Graph tags (for e.g. proper display when link shared on Facebook) -->
     <meta property="og:title" content="Tripmappr" />
     <meta property="og:description" content="Put your memories on the map." />
@@ -16,15 +16,15 @@
     <meta property="og:image:width" content="471" />
     <meta property="og:image:height" content="99" />
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
+    <link rel="shortcut icon" href="/assets/images/icons/favicon.ico" />
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/styles/css/app.css">
+    <link rel="stylesheet" href="/assets/styles/css/app.css" />
   </head>
 
-  <body ng-app="landing" ng-controller="appController">
+  <body x-ng-app="landing" x-ng-controller="appController">
     <nav>
-      <img id="logo" src="/assets/images/logo.png">
-      <img id="menu" src="/assets/images/icons/menu.png" ng-click="toggleNav()">
+      <img id="logo" src="/assets/images/logo.png" />
+      <img id="menu" src="/assets/images/icons/menu.png" ng-click="toggleNav()" />
       <ul ng-click="toggleNav()">
         <li><a href="#home">HOME</a></li>
         <li><a href="#how-it-works">HOW IT WORKS</a></li>
@@ -35,12 +35,12 @@
     <header id="home">
       <h1>tripmappr</h1>
       <h2>Welcome to</h2>
-      <img src="/assets/images/logo-white.png">
-      <img id="globe" src="/assets/images/globe.png">
-      <img class="anchor" id="anchor1" src="/assets/images/anchor1.png">
-      <img class="anchor" id="anchor2" src="/assets/images/anchor2.png">
-      <img class="anchor" id="anchor3" src="/assets/images/anchor3.png">
-      <img class="anchor" id="anchor4" src="/assets/images/anchor4.png">
+      <img src="/assets/images/logo-white.png" />
+      <img id="globe" src="/assets/images/globe.png" />
+      <img class="anchor" id="anchor1" src="/assets/images/anchor1.png" />
+      <img class="anchor" id="anchor2" src="/assets/images/anchor2.png" />
+      <img class="anchor" id="anchor3" src="/assets/images/anchor3.png" />
+      <img class="anchor" id="anchor4" src="/assets/images/anchor4.png" />
       <a href="#sign-up" class="button"><span>SIGN UP</span></a>
     </header>
 
@@ -66,7 +66,7 @@
       <ul class="clearfix">
         <li>
           <div class="feature-content graphic">
-            <img src="/assets/images/monitor.png">
+            <img src="/assets/images/monitor.png" />
           </div>
           <div class="feature-content text">
             <div class="node"><div></div></div>
@@ -81,12 +81,12 @@
             <p>Let your friends relive your trip with you! Show them where you were when that awesome thing happened.</p>
           </div>
           <div class="feature-content graphic">
-            <img src="/assets/images/brain-search.png">
+            <img src="/assets/images/brain-search.png" />
           </div>
         </li>
         <li>
           <div class="feature-content graphic">
-            <img src="/assets/images/discover.png">
+            <img src="/assets/images/discover.png" />
           </div>
           <div class="feature-content text">
             <div class="node"><div></div></div>
@@ -108,8 +108,8 @@
       <h2>Interested?</h2>
       <h3>Sign up below and you'll be the first to know when we launch!</h3>
       <form name="signUpForm" ng-submit="onSignUp" action="https://formspree.io/mike_christensen@btinternet.com" method="POST">
-        <input type="text" name="name" placeholder="Name" required></input>
-        <input type="email" name="email" placeholder="Email" required></input>
+        <input type="text" name="name" placeholder="Name" required=""></input>
+        <input type="email" name="email" placeholder="Email" required=""></input>
         <button type="submit"><span>SIGN UP</span></button>
         <!-- Hidden form elements for formspree.io -->
         <input type="hidden" name="_next" value="/#/thanks"></input>
@@ -118,11 +118,11 @@
         <input type="hidden" name="_format" value="plain"></input>
       </form>
     </div>
-    <div id="thanks" ng-show="$state.is('thanks')"> <!--  -->
+    <div id="thanks" ng-show="$state.is('thanks')">
       <div>
-        <a href="/"><img src="/assets/images/icons/close.png"></a>
+        <a href="/"><img src="/assets/images/icons/close.png" /></a>
         <h2>Thanks!</h2>
-        <p>We are working hard to get Tripmappr ready for you.<br>Keep an eye on your inbox for updates!</p>
+        <p>We are working hard to get Tripmappr ready for you.<br />Keep an eye on your inbox for updates!</p>
       </div>
     </div>
 

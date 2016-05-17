@@ -14,8 +14,22 @@ var env = (process.env.NODE_ENV || "development");
 // SET PORT NUMBER
 var port = process.env.PORT || 8080;
 
-// SERVE THE ANGULAR APP
-app.use('/', express.static(__dirname + '/public'));
+// Check if XHTML is accepted
+app.use(function(req, res, next) {
+  var accepts = req.headers.accept.split(",");
+  if (accepts.indexOf("application/xhtml+xml") >= 0) res.acceptsXHTML = true;
+  next();
+});
+// SERVE THE ANGULAR APP, possibly delivering XHTML
+app.use('/', express.static(__dirname + '/public', { setHeaders: deliverXHTML }));
+
+// Deliver XHTML where appropriate
+function deliverXHTML(res, path, stat) {
+  if (ends(path, '.html') && res.acceptsXHTML) {
+    res.header("Content-Type", "application/xhtml+xml");
+  }
+}
+function ends(s, x) { return s.indexOf(x, s.length-x.length) >= 0; }
 
 // STATICALLY SERVE DEPENDENCIES (node_modules) FOR USE BY CLIENT
 // (ie. THIS METHOD HIDES THE SERVER STRUCTURE)
