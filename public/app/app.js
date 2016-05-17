@@ -21,10 +21,8 @@ app.controller('appController', ['$rootScope', '$scope', '$state', function($roo
       e.preventDefault();
       var target = this.hash;
       $('html, body').stop().animate({
-        'scrollTop':  $(target).offset().top - 80
-      }, 900, 'swing', function () {
-        window.location.hash = target;
-      });
+        'scrollTop':  $(target).offset().top - 50
+      }, 900, 'swing');
     });
   });
 
@@ -37,4 +35,15 @@ app.controller('appController', ['$rootScope', '$scope', '$state', function($roo
       $scope.$state.href('/thanks');
     }
   }
+
+  // Capture scroll events
+  $(window).scroll(function() {
+    var items = $("#features ul li div");
+    for(var i = 0; i < items.length; i++) {
+      if($(window).scrollTop() + $(window).height() >= $(items[i]).offset().top &&
+         $(window).scrollTop() <= $(items[i]).offset().top + $(items[i]).outerHeight()) {
+        $(items[i]).addClass("animate");
+      }
+    }
+  });
 }]);

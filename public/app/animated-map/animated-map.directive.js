@@ -26,8 +26,9 @@ app.directive('animatedMap', function() {
         checkAnimations();
       });
 
-      function isScrolledPast() {
-        return $(window).scrollTop() > (elem.offset().top - 80);
+      function isInView() {
+        return $(window).scrollTop() + $(window).height() >= elem.offset().top &&
+               $(window).scrollTop() <= elem.offset().top + elem.outerHeight();
       }
 
       // If animation not yet happened, invoke it and then add 'drawn' class
@@ -36,7 +37,7 @@ app.directive('animatedMap', function() {
         if($(canvasContainer).hasClass('drawn')) {
           return;
         }
-        if(isScrolledPast()) {
+        if(isInView()) {
           redraw();
           $(canvasContainer).addClass('drawn');
         }
