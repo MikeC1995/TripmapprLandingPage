@@ -108,8 +108,12 @@ header {
     width: 150px;
     height: 40px;
     margin: 20px auto 0 auto;
+    &:hover span {
+      letter-spacing: 4px;
+    }
     span {
       line-height: 40px;
+      transition: letter-spacing 0.2s ease-out;
     }
   }
 }

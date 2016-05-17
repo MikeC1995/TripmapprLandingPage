@@ -50,7 +50,10 @@
 
       &:hover {
         cursor: pointer;
-        box-shadow: @shadow2;
+        box-shadow: @shadow3;
+        span {
+          letter-spacing: 4px;
+        }
       }
       &:focus {
         outline: none;
@@ -63,6 +66,7 @@
         font-weight: 600;
         line-height: 50px;
         color: @primary-dark;
+        transition: letter-spacing 0.2s ease-out;
         letter-spacing: 2px;
       }
     }
