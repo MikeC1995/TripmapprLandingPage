@@ -151,9 +151,17 @@
 
         &.graphic {
           text-align: right;
-          img {
+          &:before {
+            content: ' ';
+            display: inline-block;
             height: 100%;
-            width: auto;
+            vertical-align: middle;
+          }
+          img {
+            display: inline-block;
+            max-height: 100%;
+            max-width: 90%;
+            vertical-align: middle;
           }
         }
 

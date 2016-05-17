@@ -1,18 +1,4 @@
-@media only screen and (max-width: 1280px) {
-  #rows {
-    width: calc(~"100% - 20px");
-    .row-layout {
-      h2 {
-        font-size: 26px;
-      }
-      .content-text {
-        padding: 30px 30px 30px 80px;
-        p {
-          font-size: 18px;
-        }
-      }
-    }
-  }
+@media only screen and (max-width: 1000px) {
 }
 
 @media only screen and (max-width: 850px) {
@@ -33,25 +19,25 @@
     .anchor {
       &#anchor1 {
         width: 150px;
-        top: 220px;
+        top: 190px;
         left: calc(~"50% - 150px - 65px");
         transform-origin: 145px 140px;
       }
       &#anchor2 {
         width: 150px;
-        top: 205px;
+        top: 175px;
         left: calc(~"50% + 65px");
         transform-origin: 5px 115px;
       }
       &#anchor3 {
         width: 150px;
-        top: 380px;
+        top: 330px;
         left: calc(~"50% - 150px - 55px");
         transform-origin: 145px 50px;
       }
       &#anchor4 {
         width: 150px;
-        top: 320px;
+        top: 300px;
         left: calc(~"50% + 85px");
         transform-origin: 4px 57px;
       }
@@ -68,6 +54,15 @@
     span.number {
       line-height: 120px;
       font-size: 70px;
+    }
+  }
+
+  #features ul li div.feature-content.text {
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 16px;
     }
   }
 
@@ -90,9 +85,9 @@
     #menu {
       display: block;
       position: absolute;
-      height: 32px;
+      height: 24px;
       width: auto;
-      top: calc(~"50% - 16px");
+      top: calc(~"50% - 12px");
       left: 35px;
     }
     ul:not(.open) {
@@ -125,6 +120,38 @@
 
   #intro #animated-map {
     width: 90%;
+  }
+
+  #features {
+    .node {
+      margin: 0 0 0 15px;
+    }
+    ul {
+      &:before {
+        left: 35px;
+      }
+      li:nth-child(even), li:nth-child(odd) {
+        div.feature-content {
+          width: 100%;
+          height: auto;
+          float: none;
+          text-align: left;
+
+          &.graphic {
+            display: none;
+          }
+
+          &.text .node {
+            left: 22px;
+            right: auto;
+            margin: 0;
+          }
+          p {
+            float: none;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -167,28 +194,6 @@
     }
   }
 
-  #rows {
-    width: 95%;
-    .row-layout {
-      h2 {
-        font-size: 26px;
-      }
-      .content-text {
-        width: 100%;
-        padding: 20px;
-        text-align: center;
-        p {
-          font-size: 16px;
-          line-height: 150%;
-        }
-      }
-      .content-image {
-        display: none;
-      }
-    }
-  }
-
-
   #demo {
     position: relative;
     width: 100%;
@@ -216,6 +221,12 @@
           line-height: 40px;
         }
       }
+    }
+  }
+
+  #features {
+    ul li div.feature-content {
+      padding: 20px 20px 20px 100px;
     }
   }
 
